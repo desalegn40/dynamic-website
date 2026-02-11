@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Dynamic Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+    <nav>
+       <ul>
+    <li class="logo">
+        <img src="image/image.png" alt="logo">
+    </li>
+    <li>
+        <input type="text" id="search" placeholder="Search...">
+    </li>
+    <li><a href="#" onclick="showSection('home')">HOME</a></li>
+    <li><a href="#" onclick="showSection('about')">ABOUT</a></li>
+    <li><a href="#" onclick="showSection('contact')">CONTACT</a></li>
+    <li><a href="#" onclick="showSection('game')">GAME</a></li>
+    <li><a href="#" onclick="showSection('login')">LOGIN</a></li>
+</ul>
+
+    </nav>
+</header>
+
+<main class="main">
+
+<section id="home" class="page active">
+    <h2>Welcome Home</h2>
+<p>
+I am a beginner web developer creating simple, clean, and interactive websites
+using HTML, CSS, and JavaScript.
+</p>
+
+</section>
+
+<section id="about" class="page">
+    <h2>About Us</h2>
+    <p>We create simple web projects using HTML, CSS, and JavaScript.</p>
+</section>
+
+<section id="contact" class="page">
+    <h2>Contact</h2>
+   <p>Email: <a href="mailto:desu4976@gmail.com">desu4976@gmail.com</a></p>
+   <p>Telegram: <a href="https://t.me/Desu_lij40" target="_blank">@Desu_lij40</a></p>
+
+</section>
+
+<section id="game" class="page">
+    <h2>Mini Games</h2>
+
+    <button onclick="guessGame()">🎯 Guess Number</button>
+    <button onclick="startSnake()">🐍 Start Snake Game</button>
+
+    <p id="gameResult"></p>
+
+    <div id="snakeContainer"></div>
+
+    <!-- Direction Controls -->
+    <div class="controls">
+        <button onclick="setDirection('UP')">⬆️</button><br>
+        <button onclick="setDirection('LEFT')">⬅️</button>
+        <button onclick="setDirection('DOWN')">⬇️</button>
+        <button onclick="setDirection('RIGHT')">➡️</button>
+    </div>
+</section>
+<section id="login" class="page">
+    <h2>Login</h2>
+
+    <input type="text" id="username" placeholder="Username"><br><br>
+    <input type="password" id="password" placeholder="Password"><br><br>
+    <input type="password" id="confirmPassword" placeholder="Confirm Password"><br><br>
+
+    <button onclick="loginUser()">Login</button>
+
+    <p id="loginResult"></p>
+</section>
+
+</main>
+<footer class="footer">
+    <p>© 2026 My Website | All Rights Reserved</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
